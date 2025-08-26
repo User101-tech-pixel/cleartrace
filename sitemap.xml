@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://clear-trace.net</loc></url>
-  <url><loc>https://clear-trace.netprivacy.html</loc></url>
-  <url><loc>https://clear-trace.netterms.html</loc></url>
-  <url><loc>https://clear-trace.netblog/first-post.html</loc></url>
+  <url><loc>https://clear-trace.net/</loc></url>
+  <url><loc>https://clear-trace.net/privacy.html</loc></url>
+  <url><loc>https://clear-trace.net/terms.html</loc></url>
+  <url><loc>https://clear-trace.net/blog/first-post.html</loc></url>
 </urlset>
