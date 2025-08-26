@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://user101-tech-pixel.github.io/cleartrace/sitemap.xml
+Sitemap: https://clear-trace.netsitemap.xml
