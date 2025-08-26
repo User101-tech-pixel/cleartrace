@@ -17,6 +17,6 @@ function handleSubmit(e) {
   const body = encodeURIComponent(
     `Name: ${data.name || ''}\nEmail: ${data.email || ''}\nLocation: ${data.location || ''}\n\nPlease scan and send my free exposure summary.`
   );
-  window.location.href = `mailto:hello@quietshield.example?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:support@clear-trace.net?subject=${subject}&body=${body}`;
   return false;
 }
