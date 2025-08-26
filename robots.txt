@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://clear-trace.netsitemap.xml
+Sitemap: https://clear-trace.net/sitemap.xml
