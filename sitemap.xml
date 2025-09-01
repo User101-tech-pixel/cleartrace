@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://clear-trace.net/</loc></url>
-  <url><loc>https://clear-trace.net/privacy.html</loc></url>
-  <url><loc>https://clear-trace.net/terms.html</loc></url>
-  <url><loc>https://clear-trace.net/blog/whitepages-opt-out.html</loc></url>
+  <url>
+    <loc>https://clear-trace.net/</loc>
+    <lastmod>2025-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://clear-trace.net/privacy.html</loc>
+    <lastmod>2025-08-20</lastmod>
+  </url>
+  <url>
+    <loc>https://clear-trace.net/terms.html</loc>
+    <lastmod>2025-08-20</lastmod>
+  </url>
+  <url>
+    <loc>https://clear-trace.net/blog/</loc>
+    <lastmod>2025-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://clear-trace.net/blog/whitepages-opt-out.html</loc>
+    <lastmod>2025-08-26</lastmod>
+  </url>
+  <url>
+    <loc>https://clear-trace.net/blog/romance-scam-data-breach.html</loc>
+    <lastmod>2025-09-01</lastmod>
+  </url>
 </urlset>
