@@ -42,7 +42,7 @@ a:hover{text-decoration:underline}
 /* Icon-first logo (image visible, text optional) */
 .logo span{display:none}
 .logo img{
-  height:40px;               /* right-sized so header doesn’t cover content */
+  height:100px;               /* right-sized so header doesn’t cover content */
   width:auto;
   display:block;
 }
