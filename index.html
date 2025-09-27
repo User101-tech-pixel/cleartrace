@@ -205,7 +205,7 @@
     </div>
   </section>
 
-  <!-- Updated contact form (US-only, mailto) -->
+  <!-- Updated contact form (US-only, mailto, no autofill warning, new consent) -->
   <section id="contact" class="section">
     <h2>Free exposure check</h2>
     <p>Enter your details and we’ll email a free overview of how many sites currently list your information (US only).</p>
@@ -215,24 +215,25 @@
       action="mailto:support@clear-trace.net?subject=ClearTrace%20Free%20Exposure%20Check"
       method="post"
       enctype="text/plain"
+      autocomplete="off"
     >
       <div class="fields">
         <!-- Full name (required) -->
         <label>
           <span>Full name</span>
-          <input type="text" name="Full name" required placeholder="Jane Doe" autocomplete="name">
+          <input type="text" name="Full name" required placeholder="Jane Doe" autocomplete="off">
         </label>
 
         <!-- Email (required) -->
         <label>
           <span>Email (to reply)</span>
-          <input type="email" name="Email" required placeholder="jane@example.com" autocomplete="email" inputmode="email">
+          <input type="email" name="Email" required placeholder="jane@example.com" inputmode="email" autocomplete="off">
         </label>
 
         <!-- City (required) -->
         <label>
           <span>City</span>
-          <input type="text" name="City" required placeholder="Austin" autocomplete="address-level2">
+          <input type="text" name="City" required placeholder="Austin" autocomplete="off">
         </label>
 
         <!-- State (required dropdown — US only) -->
@@ -297,20 +298,20 @@
         <!-- Year of birth (optional) -->
         <label>
           <span>Year of birth (optional)</span>
-          <input type="number" name="Year of birth" placeholder="1989" min="1900" max="2025" inputmode="numeric">
+          <input type="number" name="Year of birth" placeholder="1989" min="1900" max="2025" inputmode="numeric" autocomplete="off">
         </label>
 
         <!-- Street address (optional) -->
         <label class="full">
           <span>Street address (past or current, optional)</span>
-          <input type="text" name="Street address" placeholder="1234 Main St, Apt 5">
+          <input type="text" name="Street address" placeholder="1234 Main St, Apt 5" autocomplete="off">
         </label>
       </div>
 
-      <!-- Consent -->
+      <!-- Consent (checked by default, required) -->
       <label class="consent">
-        <input type="checkbox" name="Consent" value="Yes" required>
-        <span>I am the person named above or authorized to request removals, and I agree to the
+        <input type="checkbox" name="Consent" value="Yes" checked required>
+        <span>I confirm I am the person named above or authorized to request this free exposure check, and I agree to the
           <a href="/privacy.html" target="_blank" rel="noopener">Privacy Policy</a> and
           <a href="/terms.html" target="_blank" rel="noopener">Terms of Service</a>.
         </span>
