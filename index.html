@@ -205,9 +205,12 @@
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="section">
     <h2>Free exposure check</h2>
     <p>Enter your details and we’ll send a free overview of how many sites currently list you. We’ll never share or sell your info.</p>
+
+    <!-- JS-driven mailto to avoid insecure-form warning -->
     <form class="contact-form" onsubmit="return sendMailto(event)" autocomplete="off">
       <div class="fields">
         <label>
@@ -245,20 +248,26 @@
           <span>Year of birth (optional)</span>
           <input type="number" name="Year of birth" min="1900" max="2025" placeholder="1985">
         </label>
-        <label>
-          <span>Street address (optional)</span>
-          <input type="text" name="Street address" placeholder="123 Main St">
+        <label class="full">
+          <span>Street address (past or current, optional)</span>
+          <input type="text" name="Street address" placeholder="123 Main St, Apt 5">
         </label>
       </div>
-      <label style="display:block; margin-top:12px; font-size:14px;">
+
+      <label class="consent">
         <input type="checkbox" name="Consent" required checked>
-        I confirm I am the person named above or authorized to request this free exposure check, and I agree to the 
-        <a href="privacy.html" target="_blank">Privacy Policy</a> and 
-        <a href="terms.html" target="_blank">Terms of Service</a>.
+        <span>I confirm I am the person named above or authorized to request this free exposure check, and I agree to the
+          <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a> and
+          <a href="terms.html" target="_blank" rel="noopener">Terms of Service</a>.
+        </span>
       </label>
-      <button class="btn primary" type="submit">Request my free report</button>
-      <p class="mini">No credit card required. Unsubscribe anytime.</p>
+
+      <div class="actions">
+        <button class="btn primary" type="submit">Request my free report</button>
+        <p class="mini">No credit card required. Unsubscribe anytime.</p>
+      </div>
     </form>
+
     <div class="alt-contact">
       <p>Prefer email? Write us at <a href="mailto:support@clear-trace.net">support@clear-trace.net</a></p>
     </div>
@@ -317,10 +326,11 @@ function sendMailto(e){
   const address  = val('Street address');
 
   const subject = 'ClearTrace Free Exposure Check';
-  let body = `Full name: ${fullName}\nEmail: ${email}\nCity: ${city}\nState: ${state}\n`;
+  let body = `Hello ClearTrace team,\n\nI would like to request a free exposure check. Here are my details:\n\n`;
+  body += `Full name: ${fullName}\nEmail: ${email}\nCity: ${city}\nState: ${state}\n`;
   if (yob)     body += `Year of birth: ${yob}\n`;
   if (address) body += `Street address: ${address}\n`;
-  body += `\nConsent: Yes`;
+  body += `\nConsent: Yes\n\nThank you!`;
 
   const mailto = `mailto:support@clear-trace.net?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   window.location.href = mailto;
