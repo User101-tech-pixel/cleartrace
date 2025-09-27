@@ -166,6 +166,18 @@ a:hover{text-decoration:underline}
 .btn.ghost{border-color:rgba(255,255,255,.2)}
 .btn.small{font-size:.9rem}
 
+/* Secondary pricing buttons (Basic, Family) */
+.btn.secondary{
+  background-color:#1e2a45;    /* subtle contrast vs card bg */
+  color:#ffffff;
+  border:1px solid #2f3a55;
+  transition:background .2s ease, border-color .2s ease, transform .18s ease, box-shadow .18s ease;
+}
+.btn.secondary:hover{
+  background-color:#273653;     /* slight lift on hover */
+  border-color:#3a4a6a;
+}
+
 /* ========== Misc ========== */
 .note,.mini,.tiny{color:var(--muted);text-align:center}
 .grid .card h3{margin-top:0}
@@ -232,4 +244,19 @@ input[type=text],input[type=email]{
   .nav.open{display:flex}
   .nav-toggle{display:inline-block}
   .hero h1{font-size:36px}
+}
+
+/* ===== Legal pages: left-align headings ===== */
+body.legal h1,
+body.legal h2,
+body.legal h3,
+body.legal h4{
+  text-align:left;
+  margin-left:0;
+}
+
+body.legal .page-header,
+body.legal header,
+body.legal main{
+  text-align:left;
 }
