@@ -260,3 +260,19 @@ body.legal header,
 body.legal main{
   text-align:left;
 }
+
+/* Contact layout tweaks for new fields */
+.contact-form .full { grid-column: 1 / -1; }
+.contact-form select {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.15);
+  background: #0f1630;
+  color: var(--ink);
+}
+.contact-form .consent {
+  display: flex; gap: 10px; align-items: flex-start;
+  margin-top: 10px; color: var(--muted);
+}
+.contact-form .consent a { color: var(--ink); text-decoration: underline; }
