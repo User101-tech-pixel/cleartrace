@@ -9,38 +9,63 @@
   <meta name="description" content="Learn what credit identity theft is, how fraudsters use your stolen information to open credit in your name, and how to protect yourself before they do.">
   <link rel="canonical" href="https://clear-trace.net/blog/credit-identity-theft.html">
 
-  <!-- ✅ Social Preview Images -->
+  <!-- OG + Twitter preview -->
   <meta property="og:image" content="https://clear-trace.net/blog/credit-identity-thumbnail.png">
   <meta name="twitter:image" content="https://clear-trace.net/blog/credit-identity-thumbnail.png">
-
-  <!-- Open Graph -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Credit Identity Theft — How Fraudsters Hijack Your Financial Life">
+  <meta property="og:title" content="Credit Identity Theft: How Fraudsters Hijack Your Financial Life">
   <meta property="og:description" content="Fraudsters open credit cards and loans in your name. Learn how to stop credit identity theft and protect your financial life.">
   <meta property="og:url" content="https://clear-trace.net/blog/credit-identity-theft.html">
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Credit Identity Theft — ClearTrace">
-  <meta name="twitter:description" content="Understand how fraudsters exploit your identity and what steps to take to protect yourself.">
 
+  <!-- ✅ GLOBAL PAGE STYLES (fixes white background issue) -->
+  <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/blog.css">
+
+  <!-- JSON-LD schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Credit Identity Theft: How Fraudsters Hijack Your Financial Life — and How to Stop Them",
+    "description": "Learn what credit identity theft is, how fraudsters use your stolen information to open credit in your name, and how to protect yourself before they do.",
+    "image": "https://clear-trace.net/blog/credit-identity-thumbnail.png",
+    "author": { "@type": "Organization", "name": "ClearTrace" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ClearTrace",
+      "logo": { "@type": "ImageObject", "url": "https://clear-trace.net/logo.png" }
+    },
+    "datePublished": "2025-11-01",
+    "dateModified": "2025-11-01",
+    "url": "https://clear-trace.net/blog/credit-identity-theft.html",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://clear-trace.net/blog/credit-identity-theft.html" }
+  }
+  </script>
 </head>
 
 <body>
 <header class="site-header">
-  <div class="container row between center">
-    <a class="logo" href="/">ClearTrace</a>
-    <nav class="nav">
-      <a href="/blog/">Blog</a>
-    </nav>
-  </div>
+  <a class="logo" href="/">
+    <img src="/logo.png" alt="ClearTrace logo">
+  </a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav">☰</button>
+  <nav id="nav" class="nav">
+    <a href="/#how">How it works</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#faq">FAQ</a>
+    <a class="btn small" href="/#contact">Free exposure check</a>
+  </nav>
 </header>
 
-<main class="article">
+<main class="section article">
   <article>
+    <p class="category">GUIDE</p>
     <h1>Credit Identity Theft: How Fraudsters Hijack Your Financial Life — and How to Stop Them</h1>
-    <p class="meta">Updated: <time datetime="2025-11-01">November 2025</time></p>
+    <p class="meta">
+      <time datetime="2025-11-01">Updated: November 2025</time>
+      • <span id="reading-time"></span>
+    </p>
 
     <p>Imagine waking up to a notification that you’ve been denied a loan… for a credit card you never applied for.</p>
     <p>Now imagine several cards—plus a personal loan—opened in your name, all maxed out.</p>
@@ -81,33 +106,6 @@
       <li><strong>Months of paperwork and disputes</strong></li>
     </ul>
 
-    <p>This isn’t just theft—it’s financial impersonation.</p>
-
-    <hr>
-
-    <h2>Warning Signs You Shouldn’t Ignore</h2>
-    <ul>
-      <li>Bills or statements for accounts you didn’t open</li>
-      <li>Unknown “hard inquiries” on your credit report</li>
-      <li>Sudden drop in your credit score</li>
-      <li>Bank alerts for suspicious activity</li>
-    </ul>
-
-    <p>If something feels off, act fast.</p>
-
-    <hr>
-
-    <h2>The Recovery Road</h2>
-    <p>Fixing credit identity theft takes time—often <strong>weeks to months</strong> depending on the number of fraudulent accounts.</p>
-
-    <ol>
-      <li>Contact each financial institution and dispute charges.</li>
-      <li>File an FTC identity theft report.</li>
-      <li>Work with credit bureaus to remove false accounts.</li>
-    </ol>
-
-    <p>It's doable—but exhausting.</p>
-
     <hr>
 
     <h2>How to Protect Yourself (Today)</h2>
@@ -118,24 +116,30 @@
       <li><strong>Remove your data exposure online</strong> — where criminals get your info.</li>
     </ul>
 
-    <p>With ClearTrace, you can <strong>identify and remove your data from people-search sites</strong> before criminals use it against you.</p>
-
     <blockquote>
-      ✅ Stop data exposure <br>
-      ✅ Prevent credit identity theft <br>
+      ✅ Stop data exposure<br>
+      ✅ Prevent credit identity theft<br>
       ✅ Stay in control
     </blockquote>
 
-    <p><a href="mailto:support@clear-trace.net"><strong>👉 Protect your identity before someone else uses it. Contact ClearTrace.</strong></a></p>
+    <p><a href="mailto:support@clear-trace.net" class="btn">👉 Protect your identity before someone else uses it. Contact ClearTrace.</a></p>
   </article>
 </main>
 
 <footer class="site-footer">
-  <div class="container">© <span id="y"></span> ClearTrace</div>
+  <p class="tiny">© <span id="y"></span> ClearTrace</p>
 </footer>
 
 <script>
-  document.getElementById("y").textContent = new Date().getFullYear();
+  // Reading time calculation
+  (function() {
+    const words = document.querySelector('article').innerText.trim().split(/\s+/).length;
+    const minutes = Math.max(1, Math.round(words / 200));
+    document.getElementById('reading-time').textContent = minutes + ' min read';
+  })();
+
+  // Footer year
+  document.getElementById('y').textContent = new Date().getFullYear();
 </script>
 
 </body>
